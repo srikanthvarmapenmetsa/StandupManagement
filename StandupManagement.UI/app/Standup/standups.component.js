@@ -27,12 +27,21 @@ System.register(['angular2/core', '../Services/resource.service', 'angular2/http
             StandupsComponent = (function () {
                 function StandupsComponent(_resourceService) {
                     this._resourceService = _resourceService;
-                    this.selectedResource = "test";
+                    this.selectedResource = "";
                     this.header = "Team Report";
                 }
                 StandupsComponent.prototype.ngOnInit = function () {
                     var _this = this;
                     this._resourceService.getResources().subscribe(function (p) { return _this.availableResources = p; });
+                };
+                //ngDoCheck() {
+                //    if (this.selectedResource == "6") {
+                //        this._resourceService.getReportsByResourceId(this.selectedResource).subscribe(p => this.resourceReports = p);
+                //    }
+                //}
+                StandupsComponent.prototype.onGetReport = function () {
+                    var _this = this;
+                    this._resourceService.getReportsByResourceId(this.selectedResource).subscribe(function (p) { return _this.resourceReports = p; });
                 };
                 StandupsComponent = __decorate([
                     core_1.Component({

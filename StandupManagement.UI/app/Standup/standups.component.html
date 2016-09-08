@@ -9,6 +9,7 @@
                 <select [(ngModel)]="selectedResource">
                     <option *ngFor="#resource of availableResources" [value]="resource.Id">{{resource.Name}}</option>
                 </select> 
+                <input type="button" (click)="onGetReport()" value="Get Report"/>
             </div>
         </div>
         <div class="table-responsive" style="margin:50px 0px 0px 0px; border:solid">
@@ -25,7 +26,20 @@
                         <th>Update</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <!--<tr *ngFor="#row of resourceReports">
+                        <td *ngFor="#col of row" [style.top]="col.top" [style.left]="col.left">&nbsp;</td>
+                    </tr>-->
+                    <tr *ngFor="#report of resourceReports">
+                        <td>{{report.Date}}</td>
+                        <td>{{report.Team}}</td>
+                        <td>{{report.ResourceName}}</td>
+                        <td>{{report.StoryProgress}}</td>
+                        <td>{{report.DefectProgress}}</td>
+                        <td>{{report.PanForToday}}</td>
+                        <td>{{report.Comment}}</td>
+                    </tr>          
+                </tbody>
             </table>
         </div>
     </div>

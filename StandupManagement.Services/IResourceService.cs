@@ -17,5 +17,10 @@ namespace StandupManagement.Services
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json,
              BodyStyle = WebMessageBodyStyle.Bare)]
         string GetResources();
+
+        [OperationContract]
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, UriTemplate="GetReportsByResourceId/{resourceId}",
+             BodyStyle = WebMessageBodyStyle.Bare)]
+        string GetReportsByResourceId(string resourceId);
     }
 }

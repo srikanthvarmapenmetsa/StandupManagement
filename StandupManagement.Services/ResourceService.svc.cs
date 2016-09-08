@@ -26,5 +26,16 @@ namespace StandupManagement.Services
            return serializer.Serialize(resources);
         }
 
+        public string GetReportsByResourceId(string resourceId)
+        {
+            List<Report> reports = new List<Report>();
+            if (resourceId == "6")
+            {
+                reports.Add(new Report { Id = "1", Team = "Tiger", ResourceName = "Srikanth", PanForToday = "Angular", ReportDate = DateTime.Today, Comment = "Worked on Angular" });
+            }
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            return serializer.Serialize(reports);
+        }
+
     }
 }
