@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandupManagement.UI", "StandupManagement.UI\StandupManagement.UI.csproj", "{68A70E28-8894-46AD-8593-7D0C44D9CBC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandupManagement.Services", "StandupManagement.Services\StandupManagement.Services.csproj", "{B8D4EADB-DB92-4FE7-99D8-0F7D7453A35C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{68A70E28-8894-46AD-8593-7D0C44D9CBC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68A70E28-8894-46AD-8593-7D0C44D9CBC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68A70E28-8894-46AD-8593-7D0C44D9CBC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68A70E28-8894-46AD-8593-7D0C44D9CBC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8D4EADB-DB92-4FE7-99D8-0F7D7453A35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8D4EADB-DB92-4FE7-99D8-0F7D7453A35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8D4EADB-DB92-4FE7-99D8-0F7D7453A35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8D4EADB-DB92-4FE7-99D8-0F7D7453A35C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
