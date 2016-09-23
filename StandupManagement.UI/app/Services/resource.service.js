@@ -26,10 +26,17 @@ System.register(['angular2/core', 'angular2/http', 'rxjs/Rx'], function(exports_
                 function ResourceService(_http) {
                     this._http = _http;
                     this._resourceUrl = "http://localhost/StandupManagement.Services/ResourceService.svc/GetResources";
+                    this._resourcedataUrl = "http://localhost/StandupManagement.Services/ResourceService.svc/GetReportsByResourceId";
                 }
                 ResourceService.prototype.getResources = function () {
                     if (this._http != null) {
                         return this._http.get(this._resourceUrl)
+                            .map(function (res) { return JSON.parse(res.json()); });
+                    }
+                };
+                ResourceService.prototype.getReportsByResourceId = function (resourceId) {
+                    if (this._http != null) {
+                        return this._http.get(this._resourcedataUrl + "/" + resourceId)
                             .map(function (res) { return JSON.parse(res.json()); });
                     }
                 };
